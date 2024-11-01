@@ -153,3 +153,16 @@ for images, labels in dataloader:
     print("Batch of labels:", labels.size())
     break
 ```
+
+## Citation
+
+If you use this dataset in your research, please cite it as follows:
+
+```bibtex
+@dataset{your_dataset_citation_key,
+  title={Tunnel Crack Detection Dataset (CrackTAV)},
+  author={Your Name},
+  year={2023},
+  url={https://github.com/username/tunnel-crack-dataset}
+}
+```
