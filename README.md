@@ -37,3 +37,25 @@ CrackTAV/
 │   ├── RGBT/               # Labels for RGBT images
 │   └── RGBIR/              # Labels for RGBIR images
 └── metadata.csv            # Metadata file containing additional information about each image
+
+
+## Data Format
+
+### Image Specifications
+
+- **RGB Images**: 3-channel images representing the visible light spectrum.
+- **IR Images**: 3-channel thermal images.
+- **RGB_IR_Fused Images**: 3-channel images combining RGB and IR data.
+- **RGBT Images**: 4-channel images, including RGB and a temperature channel.
+- **RGBIR Images**: 6-channel images with both RGB and IR data combined.
+
+- **Resolution**: All images are of size 256x256 pixels.
+- **File Format**: Images are saved in JPEG format.
+
+### Annotation Specifications
+
+- **Format**: Annotations are provided as binary masks in PNG format.
+- **Values**: Each pixel in the mask has a value of:
+  - `0` for background (non-crack regions)
+  - `1` for crack regions
+
