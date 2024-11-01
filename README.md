@@ -64,13 +64,13 @@ CrackTAV/
 Below are sample images from the dataset, including RGB, IR, RGB_IR_Fused, RGBT, and RGBIR images along with their corresponding labels:
 
 - **RGB Image Example**  
-  ![RGB Image Example](images/RGB/sample.jpg)
+  ![RGB Image Example](RGB/253.jpg)
 
 - **IR Image Example**  
   ![IR Image Example](images/IR/sample.jpg)
 
 - **RGB_IR_Fused Image Example**  
-  ![RGB_IR_Fused Image Example](images/RGB_IR_Fused/sample.jpg)
+  ![RGB_IR_Fused Image Example](RGB_IR_Fused/253.jpg)
 
 Each modality provides a different perspective for detecting cracks in tunnel surfaces, and combining these views allows for a more robust model training and evaluation.
 
