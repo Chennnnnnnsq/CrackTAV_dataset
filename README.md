@@ -74,3 +74,82 @@ Below are sample images from the dataset, including RGB, IR, RGB_IR_Fused, RGBT,
 
 Each modality provides a different perspective for detecting cracks in tunnel surfaces, and combining these views allows for a more robust model training and evaluation.
 
+## How to Use
+
+### Loading Images and Labels
+
+The following Python code demonstrates how to load images and corresponding labels based on their modality:
+
+```python
+import os
+from PIL import Image
+import numpy as np
+
+def load_image_and_label(image_id, modality='RGB'):
+    img_path = f'CrackTAV/images/{modality}/{image_id}.jpg'
+    label_path = f'CrackTAV/labels/{modality}/{image_id}.png'
+
+    image = Image.open(img_path)
+    label = Image.open(label_path)
+    return np.array(image), np.array(label)
+
+# Example usage
+image_id = 'img_001'
+image, label = load_image_and_label(image_id, modality='RGB')
+print("Image shape:", image.shape)
+print("Label shape:", label.shape)
+```
+
+### Using the Dataset for Model Training
+
+The following code demonstrates how to use the dataset for model training in PyTorch. It creates a custom `Dataset` class and a `DataLoader` for batch processing.
+
+```python
+import os
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torchvision import transforms
+from PIL import Image
+import numpy as np
+
+# Function to load image and label
+def load_image_and_label(image_id, modality='RGB'):
+    img_path = f'CrackTAV/images/{modality}/{image_id}.jpg'
+    label_path = f'CrackTAV/labels/{modality}/{image_id}.png'
+    image = Image.open(img_path)
+    label = Image.open(label_path)
+    return np.array(image), np.array(label)
+
+# Custom Dataset class
+class CrackDataset(Dataset):
+    def __init__(self, image_dir, label_dir, transform=None):
+        self.image_dir = image_dir
+        self.label_dir = label_dir
+        self.transform = transform
+        self.image_ids = os.listdir(image_dir)
+
+    def __len__(self):
+        return len(self.image_ids)
+
+    def __getitem__(self, idx):
+        image_id = self.image_ids[idx].split('.')[0]
+        image, label = load_image_and_label(image_id, modality='RGB')
+        if self.transform:
+            image = self.transform(image)
+            label = self.transform(label)
+        return image, label
+
+# Define transformations and create DataLoader
+transform = transforms.Compose([
+    transforms.ToTensor(),
+])
+
+dataset = CrackDataset('CrackTAV/images/RGB', 'CrackTAV/labels/RGB', transform=transform)
+dataloader = DataLoader(dataset, batch_size=8, shuffle=True)
+
+# Sample usage
+for images, labels in dataloader:
+    print("Batch of images:", images.size())
+    print("Batch of labels:", labels.size())
+    break
+```
