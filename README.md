@@ -72,11 +72,5 @@ Below are sample images from the dataset, including RGB, IR, RGB_IR_Fused, RGBT,
 - **RGB_IR_Fused Image Example**  
   ![RGB_IR_Fused Image Example](images/RGB_IR_Fused/sample.jpg)
 
-- **RGBT Image Example**  
-  ![RGBT Image Example](images/RGBT/sample.jpg)
-
-- **RGBIR Image Example**  
-  ![RGBIR Image Example](images/RGBIR/sample.jpg)
-
 Each modality provides a different perspective for detecting cracks in tunnel surfaces, and combining these views allows for a more robust model training and evaluation.
 
