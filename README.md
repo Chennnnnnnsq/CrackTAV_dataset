@@ -37,7 +37,7 @@ CrackTAV/
 │   ├── RGBT/               # Labels for RGBT images
 │   └── RGBIR/              # Labels for RGBIR images
 └── metadata.csv            # Metadata file containing additional information about each image
-
+```
 
 ## Data Format
 
