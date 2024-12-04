@@ -1,13 +1,11 @@
 # Tunnel Crack Detection Thermal And Visible Dataset (CrackTAV)
-A multimodal dataset for tunnel crack detection, containing various channel configurations including RGB, IR, fused RGB-IR, RGB-T, and RGB-IR modalities.
+A multimodal dataset for tunnel crack detection, containing various channel configurations including RGB, IR, RGB_IR_Fused, RGB_T, and RGB_IR.
 
 
 ## Table of Contents
 - [Overview](#overview)
 - [Download Links](#download-links)
-- [Dataset Structure](#dataset-structure)
 - [Data Format](#data-format)
-- [Sample Images](#sample-images)
 - [How to Use](#how-to-use)
 - [Citation](#citation)
 - [License](#license)
@@ -20,29 +18,6 @@ The Tunnel Crack Detection Dataset (CrackTAV) is a comprehensive dataset develop
 ## Download Links
 - Baidu Netdisk: [CrackTAV Dataset](https://pan.baidu.com/s/1RfAcgQv9dwleZYeAjLzegQ) (Extraction Code: `1472`)
 
-
-
-## Dataset Structure
-
-The dataset is organized into the following structure:
-
-```plaintext
-CrackTAV/
-├── README.md               # Dataset description
-├── images/                 # Contains all images in the dataset
-│   ├── RGB/                # 3-channel RGB images (visible light)
-│   ├── IR/                 # 3-channel IR images (thermal)
-│   ├── RGB_IR_Fused/       # 3-channel fused RGB and IR images
-│   ├── RGBT/               # 4-channel RGB and temperature images
-│   └── RGBIR/              # 6-channel RGB and IR images
-├── labels/                 # Ground truth labels for cracks
-│   ├── RGB/                # Labels for RGB images
-│   ├── IR/                 # Labels for IR images
-│   ├── RGB_IR_Fused/       # Labels for fused RGB_IR images
-│   ├── RGBT/               # Labels for RGBT images
-│   └── RGBIR/              # Labels for RGBIR images
-└── metadata.csv            # Metadata file containing additional information about each image
-```
 
 ## Data Format
 
@@ -64,20 +39,6 @@ CrackTAV/
   - `0` for background (non-crack regions)
   - `1` for crack regions
 
-## Sample Images
-
-Below are sample images from the dataset, including RGB, IR, RGB_IR_Fused, RGBT, and RGBIR images along with their corresponding labels:
-
-- **RGB Image Example**  
-  ![RGB Image Example](RGB/253.jpg)
-
-- **IR Image Example**  
-  ![IR Image Example](images/IR/sample.jpg)
-
-- **RGB_IR_Fused Image Example**  
-  ![RGB_IR_Fused Image Example](RGB_IR_Fused/253.jpg)
-
-Each modality provides a different perspective for detecting cracks in tunnel surfaces, and combining these views allows for a more robust model training and evaluation.
 
 ## How to Use
 
