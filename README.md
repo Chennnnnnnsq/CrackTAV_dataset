@@ -12,7 +12,7 @@ A multimodal dataset for tunnel crack detection, containing various channel conf
 
 ## Overview
 
-The Tunnel Crack Detection Dataset (CrackTAV) is a comprehensive dataset developed to support research in tunnel crack detection using multimodal imagery. The dataset includes visible light (RGB), infrared (IR), RGB_IR_Fused, RGBT, and RGBIR images, enabling researchers to explore the performance of detection models across different channel configurations and modalities. The dataset is designed to address challenges in complex lighting conditions and varying environmental factors.
+The Tunnel Crack Detection Dataset (CrackTAV) is a comprehensive dataset developed to support research in tunnel crack detection using multimodal imagery. The dataset includes visible light (RGB), infrared (IR), RGB_IR_Fused, RGB_T, and RGB_IR images, enabling researchers to explore the performance of detection models across different channel configurations and modalities. The dataset is designed to address challenges in complex lighting conditions and varying environmental factors.
 
 
 ## Download Links
@@ -26,8 +26,8 @@ The Tunnel Crack Detection Dataset (CrackTAV) is a comprehensive dataset develop
 - **RGB Images**: 3-channel images representing the visible light spectrum.
 - **IR Images**: 3-channel thermal images.
 - **RGB_IR_Fused Images**: 3-channel images combining RGB and IR data.
-- **RGBT Images**: 4-channel images, including RGB and a temperature channel.
-- **RGBIR Images**: 6-channel images with both RGB and IR data combined.
+- **RGB_T Images**: 4-channel images, including RGB and a temperature channel.
+- **RGB_IR Images**: 6-channel images with both RGB and IR data combined.
 
 - **Resolution**: All images are of size 256x256 pixels.
 - **File Format**: Images are saved in JPEG format.
